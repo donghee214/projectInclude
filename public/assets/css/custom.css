@@ -1,0 +1,472 @@
+   #feedback-page {
+       text-align: center;
+   }
+   
+   #form-main {
+       width: 100%;
+       float: left;
+       padding-top: 0px;
+   }
+   
+   #centered {
+       font-family: 'Source Sans Pro';
+       color: whitesmoke;
+       /* padding-bottom: 0.3em; */
+       margin-bottom: 0.3em;
+       text-align: left;
+   }
+   
+   #centered:after {
+       content: "";
+       border-bottom: 3px dotted whitesmoke;
+       -webkit-transition: 0.7s ease-in-out 0.01s;
+       -o-transition: 0.7s ease-in-out 0.01s;
+       transition: 0.7s ease-in-out 0.01s;
+       position: absolute;
+       width: 84%;
+       left: 8%;
+       padding-bottom: 1.25em;
+   }
+   
+   #form-div {
+       background-image: url("images/grey.png"), url("images/mobileBookmark1.png");
+       background-size: cover;
+       padding-left: 35px;
+       padding-right: 35px;
+       padding-top: 35px;
+       padding-bottom: 50px;
+       width: 450px;
+       left: calc(50% - 225px);
+       position: absolute;
+       top: 10%;
+       border: 2px dotted whitesmoke;
+       opacity: 0;
+   }
+   
+   #topRight {
+       height: 1.4em;
+       position: absolute;
+       right: 0;
+       padding: 0.em;
+       margin: 2em;
+   }
+   
+   #topRight:hover {
+       cursor: pointer;
+   }
+   
+   .feedback-input {
+       color: #3c3c3c;
+       font-family: 'Source Sans Pro';
+       font-weight: 500;
+       font-size: 18px;
+       border-radius: 0;
+       line-height: 22px;
+       background-color: #fbfbfb;
+       padding: 13px 13px 13px 54px !important;
+       /* margin-bottom: 0px; */
+       width: 100%;
+       border: 2px solid #A9A092;
+       margin: 0.5em 0 0.1em 0;
+   }
+   
+   .feedback-input:focus {
+       color: #FFA49A;
+       border: 2px solid #FFA49A;
+       outline: none;
+   }
+   
+   .email {
+       cursor: pointer;
+   }
+   /* Icons ---------------------------------- */
+   /*#name {
+       background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+       background-size: 30px 30px;
+       background-position: 11px 8px;
+       background-repeat: no-repeat;
+   }
+   
+   #name:focus {
+       background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+       background-size: 30px 30px;
+       background-position: 8px 5px;
+       background-position: 11px 8px;
+       background-repeat: no-repeat;
+   }
+   
+   #email {
+       background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+       background-size: 30px 30px;
+       background-position: 11px 8px;
+       background-repeat: no-repeat;
+   }
+   
+   #email:focus {
+       background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+       background-size: 30px 30px;
+       background-position: 11px 8px;
+       background-repeat: no-repeat;
+   }
+   
+   #comment {
+       background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+       background-size: 30px 30px;
+       background-position: 11px 8px;
+       background-repeat: no-repeat;
+   }
+   */
+   
+   textarea {
+       width: 100%;
+       height: 150px;
+       line-height: 150%;
+       resize: vertical;
+   }
+   
+   input:hover,
+   textarea:hover,
+   input:focus,
+   textarea:focus {
+       background-color: white;
+   }
+   
+   #button-blue {
+       font-family: 'Source Sans Pro';
+       float: left;
+       width: 100%;
+       border: #fbfbfb solid 4px;
+       cursor: pointer;
+       font-size: 24px;
+       -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+       transition: all 0.3s;
+       font-weight: 700;
+       border-radius: 0;
+   }
+   
+   #button-blue:hover {
+       background: #ef8376;
+       transition: none;
+   }
+   
+   .submit:hover {
+       color: #3498db;
+   }
+   
+   .ease {
+       width: 0px;
+       height: 74px;
+       background-color: #fbfbfb;
+       -webkit-transition: .3s ease;
+       -moz-transition: .3s ease;
+       -o-transition: .3s ease;
+       -ms-transition: .3s ease;
+       transition: .3s ease;
+   }
+   
+   .submit:hover .ease {
+       width: 100%;
+       background-color: white;
+   }
+   
+   #logo {
+       display: inline-block;
+       font-size: 4vmax;
+       font-family: 'arial';
+       letter-spacing: -2.7px;
+   }
+   
+   .typed-cursor {
+       opacity: 1;
+       font-size: 4vmax;
+       -webkit-animation: blink 1s infinite;
+       -moz-animation: blink 1s infinite;
+       animation: blink 1s infinite;
+       font-size: 4.5vmax;
+       color: #ccc;
+   }
+   
+   @keyframes blink {
+       0% {
+           opacity: 1;
+       }
+       50% {
+           opacity: 0;
+       }
+       100% {
+           opacity: 1;
+       }
+   }
+   
+   @-webkit-keyframes blink {
+       0% {
+           opacity: 1;
+       }
+       50% {
+           opacity: 0;
+       }
+       100% {
+           opacity: 1;
+       }
+   }
+   
+   @-moz-keyframes blink {
+       0% {
+           opacity: 1;
+       }
+       50% {
+           opacity: 0;
+       }
+       100% {
+           opacity: 1;
+       }
+   }
+   
+   .red {
+       color: red;
+   }
+   
+   .relocate {
+       position: absolute;
+       padding: 1em 0.3em 0.5em 0.6em;
+   }
+   
+   #red {
+       color: red !important;
+   }
+   
+   pre {
+       color: black;
+   }
+   
+   .title {
+       font-size: 3.5vmax;
+       font-weight: 300;
+       line-height: 1.9;
+       opacity: 0;
+   }
+   
+   strong {
+       font-weight: bold;
+       color: #800000;
+   }
+   
+   body {
+       width: calc(100vw - 17px);
+   }
+   
+   #one,
+   #two,
+   #three {
+       opacity: 0;
+   }
+   
+   .carousel-cell {
+       width: 100%;
+       padding: 0 7.5% 0 7.5%;
+   }
+   
+   .first {
+       opacity: 0;
+   }
+   
+   .imageLogo {
+       position: absolute;
+       top: 3vmax;
+       background-image: url(images/logo.png);
+       left: 6vmax;
+       background-size: cover;
+       width: 15em;
+       background-position: center;
+       background-repeat: no-repeat;
+       height: 11em;
+       opacity: 0;
+   }
+   
+   b {
+       color: #FF0F00;
+       font-weight: bold;
+   }
+   
+   .logoBox {
+       position: absolute;
+       height: 13vmax;
+       width: 26vmax;
+       top: -14vmax;
+       left: calc(50% - 13vmax);
+   }
+   
+   .left {
+       width: 6vmax;
+       float: left;
+       margin-top: -2vmax;
+       margin-left: 2.5vmax;
+       opacity: 0;
+   }
+   
+   .center {
+       width: 9vmax;
+       float: left;
+       margin-top: 0vmax;
+       opacity: 0;
+   }
+   
+   .right {
+       width: 6vmax;
+       float: left;
+       margin-top: -2vmax;
+       opacity: 0;
+   }
+   
+   a {
+       text-decoration: none;
+   }
+   
+   a:hover {
+       color: #FFA49A !important;
+   }
+   
+   .fa-twitter:hover,
+   .fa-facebook:hover,
+   .fa-instagram:hover,
+   .fa-envelope-o:hover {
+       color: #FFA49A !important;
+       transition: none !important;
+   }
+   
+   .down:hover {
+       color: #FFA49A !important;
+       cursor: pointer;
+       transition: none !important;
+   }
+   
+   .down1:hover {
+       color: #ef8376 !important;
+       cursor: pointer;
+       transition: none !important;
+   }
+   
+   @media screen and (max-width: 736px) {
+       #marginTop {
+           margin-top: 0em !important;
+           left: 0;
+       }
+       body {
+           width: 100%;
+       }
+   }
+   
+   #header header > a {
+       font-size: 1.25em
+   }
+   
+   .orange {
+       background-color: #ef8376 !important;
+   }
+   
+   .application,
+   .news,
+   .pictures {
+       -moz-transition: background-color 4s ease-in-out;
+       -webkit-transition: background-color 0.4s ease-in-out;
+       -ms-transition: background-color 0.4s ease-in-out;
+       transition: background-color 0.4s ease-in-out;
+       /*-moz-transition-delay: 0.45s;
+       -webkit-transition-delay: 0.45s;
+       -ms-transition-delay: 0.45s;
+       transition-delay: 0.45;*/
+   }
+   
+   .tweet,
+   .post,
+   .image2 {
+       opacity: 0;
+   }
+   
+   .stuff {
+       font-size: 1.2em !important;
+   }
+   
+   .close {
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+       position: absolute;
+       top: 0;
+   }
+   
+   .fa-times {
+       position: absolute;
+       right: 0;
+       top: 0;
+   }
+   
+   .modal,
+   .modal1 {
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.4);
+       position: fixed;
+       top: 0;
+       left: 0;
+       opacity: 0;
+       z-index: -1;
+   }
+   
+   .pic1 {
+       background-image: url("images/pic15.jpg");
+       background-size: cover;
+       height: 100%;
+       background-repeat: no-repeat;
+       padding: 0 2em 0 2em;
+   }
+   
+   .viewport {
+       height: 25em !important;
+       width: 40em;
+       left: calc(50% - 20em);
+       top: 10em;
+       padding: 0 2em 0 2em;
+   }
+   
+   @media only screen and (max-width: 580px) {
+       #form-div {
+           left: 6%;
+           width: 88%;
+       }
+       .feedback-input {
+           color: #3c3c3c;
+           font-family: 'Source Sans Pro';
+           font-weight: 500;
+           font-size: 18px;
+           border-radius: 0;
+           line-height: 22px;
+           background-color: #fbfbfb;
+           padding: 13px 13px 13px 40px !important;
+           margin-bottom: 5px;
+           width: 116%;
+           margin-left: -8%;
+           border: 2px solid #A9A092;
+       }
+       .relocate {
+           position: absolute;
+           padding: 1.15em 0.3em 0.5em 0em;
+           margin-left: -0.4em;
+       }
+       #centered {
+           font-family: 'Source Sans Pro';
+           color: whitesmoke;
+           /* padding-bottom: 0.3em; */
+           margin-bottom: 0.3em;
+           text-align: left;
+           margin-left: -7%;
+       }
+       #centered {
+           margin-left: -7%;
+       }
+       #centered:after {
+           width: 92%;
+           left: 4.2%;
+       }
+   }
