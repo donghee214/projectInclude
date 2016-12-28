@@ -1,6 +1,6 @@
-# Node.js Starter Overview
+# Project Include
 
-The Node.js Starter demonstrates a simple, reusable Node.js web application based on the Express framework.
+Website built for school club that aims of raising code literacy amongst children. Check it out [here](https://projectinclude.mybluemix.net/)
 
 ## Run the app locally
 
